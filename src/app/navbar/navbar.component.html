@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+
+    <img src="#" routerLink="home">
+    
+    <div class="spacer"></div>
+
+    <a mat-button routerLink="home"><mat-icon>home</mat-icon>TRANG CHỦ</a>
+    
+    <button mat-button [matMenuTriggerFor]="menuThoiSu">THỜI SỰ</button>
+    <mat-menu #menuThoiSu="matMenu">
+        <button mat-menu-item routerLink="#">CHÍNH TRỊ</button>
+        <button mat-menu-item routerLink="#">GIAO THÔNG</button>
+        <button mat-menu-item routerLink="#">KINH TẾ</button>
+    </mat-menu>
+
+    <a mat-button routerLink="#">GIẢI TRÍ</a>
+    
+    <button mat-button [matMenuTriggerFor]="menuKinhDoanh">KINH DOANH</button>
+    <mat-menu #menuKinhDoanh="matMenu">
+        <button mat-menu-item routerLink="#">DOANH NGHIỆP</button>
+        <button mat-menu-item routerLink="#">HÀNG HÓA</button>
+        <button mat-menu-item routerLink="#">KINH DOANH BDS</button>
+    </mat-menu>
+    
+    <button mat-button [matMenuTriggerFor]="menuLamDep">LÀM ĐẸP</button>
+    <mat-menu #menuLamDep="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="menuSPA">SPA</button>
+    </mat-menu>
+        <mat-menu #menuSPA="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="menuDuongDa">DƯỠNG DA</button>
+        </mat-menu>
+    <mat-menu #menuDuongDa="matMenu">
+        <button mat-menu-item routerLink="#">PHƯƠNG PHÁP</button>
+        <button mat-menu-item routerLink="#">CHĂM SÓC</button>
+        <button mat-menu-item routerLink="#">THEO DÕI</button>
+        <button mat-menu-item routerLink="#">BÌNH LUẬN</button>
+        <button mat-menu-item routerLink="#">BẢNG GIÁ</button>
+    </mat-menu>
+    
+    <a mat-button routerLink="#">TÂM SỰ</a>
+    
+    <a mat-raised-button color="accent" routerLink="#">ĐĂNG NHẬP</a>
+
+</mat-toolbar>
